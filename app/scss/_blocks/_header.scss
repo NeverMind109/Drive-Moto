@@ -49,17 +49,11 @@
   justify-content: space-around;
   background-color: #f0f0f4;
   min-height: 53px;
-  &__item {
-    position: relative;
-  }
   &__link {
-    position: absolute;
+    position: relative;
     text-transform: capitalize;
     transition: all 0.3s;
     padding: 15px 0 14px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     &:before {
       content: "";
       position: absolute;
