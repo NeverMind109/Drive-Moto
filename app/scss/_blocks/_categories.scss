@@ -1,0 +1,54 @@
+.categories {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    padding: 20px 20px 16px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+      .categories__item-title {
+        color: #1c62cd;
+      }
+    }
+  }
+  &__item-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__item-title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 28px;
+    transition: all 0.3s;
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: #c4c4c4;
+    &::after {
+      content: url("../images/more-arrow-icon.svg");
+      padding-left: 3px;
+    }
+  }
+  &__item-image {
+    width: 50%;
+    text-align: center;
+  }
+  &__item-img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
