@@ -4,17 +4,9 @@
   }
   &__tabs-item {
     padding: 11px 26px 12px;
-    &--active {
-      font-weight: 700;
-      background: #f0f0f4;
-      border-radius: 5px;
-    }
   }
   &__content-item {
     display: none;
-    &--active {
-      display: block;
-    }
   }
   &__content-form {
     display: flex;
@@ -51,4 +43,13 @@
     margin-left: -3px;
     cursor: pointer;
   }
+}
+.search__tabs-item.tab--active {
+  font-family: "SFProDisplay-Bold", sans-serif;
+  font-weight: 700;
+  background: #f0f0f4;
+  border-radius: 5px;
+}
+.search__content-item.tabs-content--active {
+  display: block;
 }

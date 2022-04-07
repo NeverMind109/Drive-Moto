@@ -1,0 +1,204 @@
+.products {
+  &__title {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  &__tabs {
+    margin-bottom: 25px;
+  }
+  &__tab {
+    font-size: 15px;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+  &__slider-button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    cursor: pointer;
+  }
+  &__slider-next {
+    right: -20px;
+  }
+  &__slider-prev {
+    left: -20px;
+  }
+  &__link {
+    text-align: center;
+    margin-top: 35px;
+  }
+  &__link-more {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.12em;
+    padding: 16px 43px;
+    text-transform: uppercase;
+    background: #f0f0f4;
+  }
+}
+.products__tab + .products__tab {
+  margin-left: 50px;
+}
+.products__tab.tab--active {
+  border-bottom: 2px solid #1c62cd;
+}
+.product-item {
+  position: relative;
+  width: 271px;
+  margin: 0 auto;
+  &__link {
+    min-height: 400px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    padding: 52px 20px 31px;
+    transition: all 0.3s;
+    &--sale {
+      &:before {
+        content: "SALE";
+        position: absolute;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 8px 15px;
+        background: #1c62cd;
+        left: 0;
+        top: 0;
+      }
+    }
+    &:hover {
+      box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+      .product-item__hover-text {
+        opacity: 1;
+      }
+      .product-item__title {
+        color: #1c62cd;
+      }
+      .product-item__price {
+        color: #1c62cd;
+      }
+      .product-item__notify-text {
+        color: #2f3035;
+      }
+    }
+  }
+  &__hover-text {
+    position: absolute;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 18px 21px;
+    top: 30%;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__favourites {
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    width: 24px;
+    height: 22px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    &:before {
+      content: "";
+      position: absolute;
+      background: url("../images/favourites.svg") no-repeat;
+      width: 24px;
+      height: 22px;
+      top: 0;
+      left: 0;
+    }
+    &--active {
+      &:before {
+        background: url("../images/favourites-active.svg") no-repeat;
+      }
+    }
+  }
+  &__title {
+    font-weight: 400;
+    padding: 14px 0 25px;
+  }
+  &__price {
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &__basket {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    padding: 0;
+    background: #1c62cd;
+    border: none;
+    border-radius: 10px 0px 0px 0px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/basket-white.svg") no-repeat;
+      width: 30px;
+      height: 23px;
+      top: 10px;
+      left: 14px;
+    }
+  }
+  &__notify-text {
+    display: none;
+    font-family: "SFProDisplay-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  &__notify-link {
+    display: none;
+  }
+}
+.product-item.product-item__not-available {
+  .product-item__link {
+    padding: 52px 20px 66px;
+  }
+  .product-item__price {
+    display: none;
+  }
+  .product-item__notify-text {
+    display: block;
+  }
+  .product-item__title {
+    padding: 11px 0 7px;
+  }
+  .product-item__basket {
+    display: none;
+  }
+  .product-item__notify-link {
+    display: block;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    span {
+      font-size: 16px;
+      line-height: 19px;
+      color: #1c62cd;
+      border-bottom: 1px solid #1c62cd;
+    }
+  }
+}
