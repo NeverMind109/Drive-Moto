@@ -1,0 +1,21 @@
+.breadcrumbs {
+  margin-bottom: 40px;
+  &__list-item {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 18px;
+    color: #c4c4c4;
+    padding-right: 16px;
+    margin-right: 10px;
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 6px;
+      background: url("../images/more-arrow-icon.svg") no-repeat;
+      right: 0;
+      bottom: 5px;
+    }
+  }
+}
