@@ -29,4 +29,28 @@ $(function () {
     nextArrow:
       '<button class="products__slider-button products__slider-next" type="button"><img src="images/products-slider-arrow-next.svg" alt="Next Arrow" class="products__slider-next-img"></button>',
   });
+
+  $(".filter-style").styler();
+
+  $(".filter__item-drop, .filter__btn-extra").on("click", function () {
+    $(this).toggleClass("filter__item-drop--active");
+    $(this).next().slideToggle("200");
+  });
+
+  $(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: 100000,
+    max: 500000,
+  });
+
+  $(".catalog__fiter-btngrid").on("click", function () {
+    $(this).addClass("catalog__filter-display--active");
+    $(".catalog__fiter-btnline").removeClass("catalog__filter-display--active");
+    $(".product-item").removeClass("product-item--list");
+  });
+  $(".catalog__fiter-btnline").on("click", function () {
+    $(this).addClass("catalog__filter-display--active");
+    $(".catalog__fiter-btngrid").removeClass("catalog__filter-display--active");
+    $(".product-item").addClass("product-item--list");
+  });
 });
