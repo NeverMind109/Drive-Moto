@@ -20,6 +20,9 @@ $(function () {
   $(".product-item__favourites").on("click", function () {
     $(this).toggleClass("product-item__favourites--active");
   });
+  $(".product-card__favourites").on("click", function () {
+    $(this).toggleClass("product-card__favourites--active");
+  });
 
   $(".product-slider").slick({
     slidesToShow: 4,
@@ -52,5 +55,13 @@ $(function () {
     $(this).addClass("catalog__filter-display--active");
     $(".catalog__fiter-btngrid").removeClass("catalog__filter-display--active");
     $(".product-item").addClass("product-item--list");
+  });
+
+  $(".rate-yo").rateYo({
+    starWidth: "23px",
+    numStars: 5,
+    ratedFill: "#1C62CD",
+    normalFill: "#C4C4C4",
+    spacing: "7px",
   });
 });

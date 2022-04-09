@@ -20,13 +20,13 @@
     "gulp-uglify-es": "^3.0.0",
     "jquery": "^3.6.0",
     "node-normalize-scss": "^8.1.2",
+    "rateyo": "^3.0.0-alpha.2",
     "sass": "^1.45.0",
     "slick-carousel": "^1.8.1",
     "wow.js": "^1.2.2"
   },
   "dependencies": {
     "ion-rangeslider": "^2.3.1",
-    "jquery-form-styler": "^2.0.2",
-    "rateyo": "^3.0.0-alpha.2"
+    "jquery-form-styler": "^2.0.2"
   }
 }

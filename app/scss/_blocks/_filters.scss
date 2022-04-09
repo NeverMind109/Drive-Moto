@@ -148,7 +148,7 @@
     display: inline-block;
     font-size: 13px;
     line-height: 16px;
-    padding-right: 29px;
+    cursor: pointer;
     margin-bottom: 15px;
     &::after {
       content: "";
@@ -158,14 +158,14 @@
       background: url("../images/filter-drop-closed.svg") no-repeat;
       transform: rotate(0deg);
       top: 5px;
-      right: 0;
+      right: -29px;
     }
   }
   &__btn-extra-content {
     display: none;
   }
   &__btn-reset {
-    display: inline-block;
+    display: flex;
     font-size: 13px;
     line-height: 16px;
     color: #c4c4c4;
@@ -173,6 +173,7 @@
     border-bottom: 1px solid #c4c4c4;
     background-color: transparent;
     padding: 0;
+    margin: 0 auto;
     cursor: pointer;
   }
 }

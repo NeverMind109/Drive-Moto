@@ -44,7 +44,6 @@ function libscss() {
     "node_modules/ion-rangeslider/css/ion.rangeSlider.css",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.css",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css",
-    "node_modules/rateyo/lib/iife/rateyo.css",
   ])
     .pipe(concat("_libs.scss"))
     .pipe(
@@ -64,7 +63,7 @@ function scripts() {
     "node_modules/wow.js/dist/wow.js",
     "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
     "node_modules/jquery-form-styler/dist/jquery.formstyler.js",
-    "node_modules/rateyo/lib/iife/rateyo.js",
+    "app/js/jquery.rateyo.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
