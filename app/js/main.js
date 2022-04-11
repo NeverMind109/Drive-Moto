@@ -5,16 +5,26 @@ $(function () {
       '<button class="banner-section__slider-button banner-section__slider-prev" type="button"><img src="images/banner-slider-arrow-prev.svg" alt="Previous Arrow" class="banner-section__slider-prev-img"></button>',
     nextArrow:
       '<button class="banner-section__slider-button banner-section__slider-next" type="button"><img src="images/banner-slider-arrow-next.svg" alt="Next Arrow" class="banner-section__slider-next-img"></button>',
+    responsive: [
+      {
+        breakpoint: 969,
+        settings: {
+          arrows: false,
+        },
+      },
+    ],
   });
 
   $(".tab").on("click", function (e) {
     e.preventDefault();
     $($(this).siblings()).removeClass("tab--active");
-    $($(this).parent().siblings().find("div")).removeClass(
+    $($(this).closest(".tabs-wrapper").siblings().find("div")).removeClass(
       "tabs-content--active"
     );
     $(this).addClass("tab--active");
     $($(this).attr("href")).addClass("tabs-content--active");
+
+    $(".slick-slider").slick("setPosition");
   });
 
   $(".product-item__favourites").on("click", function () {
@@ -31,6 +41,39 @@ $(function () {
       '<button class="products__slider-button products__slider-prev" type="button"><img src="images/products-slider-arrow-prev.svg" alt="prev Arrow" class="products__slider-prev-img"></button>',
     nextArrow:
       '<button class="products__slider-button products__slider-next" type="button"><img src="images/products-slider-arrow-next.svg" alt="Next Arrow" class="products__slider-next-img"></button>',
+    responsive: [
+      {
+        breakpoint: 1301,
+        settings: {
+          arrows: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3,
+          arrows: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   });
 
   $(".filter-style").styler();
@@ -63,5 +106,18 @@ $(function () {
     ratedFill: "#1C62CD",
     normalFill: "#C4C4C4",
     spacing: "7px",
+  });
+
+  $(".menu__btn").on("click", function () {
+    $(".menu-mobile__list").toggleClass("menu-mobile__list--active");
+  });
+
+  $(".footer__dropdown-title").on("click", function () {
+    $(this).next().slideToggle();
+    $(".footer__dropdown-title").toggleClass("footer__dropdown-title--active");
+  });
+
+  $(".aside__btn").on("click", function () {
+    $(this).next().slideToggle();
   });
 });

@@ -4,6 +4,11 @@
     margin-right: 10px;
   }
 }
+.aside {
+  &__btn {
+    display: none;
+  }
+}
 .aside-filter {
   &__tabs {
     display: flex;
@@ -192,12 +197,13 @@
   text-shadow: none;
   border: none;
   border-radius: 3px;
-  padding: 0 25px 0 10px;
+  padding: 0 25px 0 0;
   height: 20px;
 }
 .jq-selectbox__dropdown {
   border-radius: 0;
   padding: 15px 0 0;
+  left: 0;
   box-shadow: none;
 }
 .jq-selectbox__trigger {
@@ -237,6 +243,7 @@
   color: rgba(0, 0, 0, 0.6);
 }
 .jq-selectbox li {
+  padding: 5px 0px 6px 20px;
   color: rgba(0, 0, 0, 0.6);
 }
 .aside-filter__content.aside-filter__content-radio {

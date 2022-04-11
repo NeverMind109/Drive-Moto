@@ -71,13 +71,13 @@
     height: 22px;
     border: none;
     background-color: transparent;
-    background: url("../../images/favourites.svg");
+    background: url("../images/favourites.svg");
     transition: all 0.3s;
     padding: 0;
     cursor: pointer;
     margin-right: 30px;
     &--active {
-      background: url("../../images/favourites-active.svg");
+      background: url("../images/favourites-active.svg");
     }
   }
   &__comparison {
@@ -112,6 +112,11 @@
     color: #1c62cd;
     border-bottom: 1px solid #1c62cd;
     margin-bottom: 40px;
+  }
+  &__button {
+    &--mobile {
+      display: none;
+    }
   }
   &__btn {
     font-size: 14px;
